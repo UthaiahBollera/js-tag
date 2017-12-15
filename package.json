@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "watch":"webpack src/app.js  dist/index.js --env.prod --env.min --hot --watch",
+    "build-js":"webpack src/app.js  index.js --env.prod --env.min --hot --watch",
+    "build-css":"webpack src/app.js  index.js --env.prod --env.min --hot --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
