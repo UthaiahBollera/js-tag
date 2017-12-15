@@ -4,6 +4,7 @@
   "description": "Tags using pure JavaScript",
   "main": "index.js",
   "scripts": {
+    "watch":"webpack src/app.js  dist/index.js --env.prod --env.min --hot --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
