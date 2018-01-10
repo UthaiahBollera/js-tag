@@ -1,5 +1,5 @@
 exports.greeting = {
   Greet: () => {
-    return "Hello World!!";
+    return "Hello World";
   }
 };
