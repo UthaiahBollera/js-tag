@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Tag</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .tag-container {
+            border: solid 1px #e4e4e4;
+            min-height: 70px;
+            max-height: 300px;
+        }
+
+        .tag-list,
+        .tag-input {
+            display: inline-block;
+            float: left;
+        }
+
+        .tag-list>.tag {
+            float: left;
+        }
+
+        .tag:first-child {
+            margin-left: 5px;
+        }
+
+        .tag {
+            background: #e4e4e4;
+            ;
+            margin-right: 5px;
+            margin-top: 5px;
+            padding: 5px;
+        }
+
+        .tag-input {
+            position: relative;
+        }
+
+        .tag-input>input:focus {
+            border: none;
+        }
+
+        .tag-input>input {
+            -webkit-appearance: none;
+            position: absolute;
+            margin-top: 5px;
+            font-size: 20px;
+            border: none;
+            outline: 0;
+        }
+
+        .tag>.close:hover {
+            color: #a4b7a4;
+            cursor: pointer;
+        }
+
+        .tag-list .content {
+            padding-left: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='root'></div>
+    <script src="index.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            new Tag({
+                root: 'root',
+                onInputChange: function (data) {
+                    console.log('Input changed!!');
+                }
+            });
+        });      
+    </script>
+</body>
+
+</html>
